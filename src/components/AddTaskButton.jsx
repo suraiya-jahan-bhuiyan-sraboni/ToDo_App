@@ -38,7 +38,7 @@ const AddTaskButton = () => {
             addTodo({
                 title: newTask.title,
                 description: newTask.desc,
-               date: newTask.date ? newTask.date.toISOString() : new Date(),
+               date: newTask.date ? newTask.date.toISOString() : new Date().toISOString(),
             })
         );
 

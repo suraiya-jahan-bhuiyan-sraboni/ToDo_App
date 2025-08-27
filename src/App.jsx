@@ -21,6 +21,9 @@ function App() {
   const todos = useSelector(selectFilteredTodos);
   const stats = useSelector(selectStats);
 
+  const filteredTodos = todos.filter(todo =>
+    todo.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
   return (
     <div className='w-11/12 mx-auto py-10 space-y-10'>
       <h1 className="text-end">
@@ -93,12 +96,15 @@ function App() {
         <AddTaskButton />
       </div>
       {/* task cards */}
-      {todos.length !== 0 &&
-        todos.map(item => (
+      {filteredTodos.length !== 0 ? (
+        filteredTodos.map(item => (
           <TaskCard key={item.id} item={item} />
         ))
-      }
-      {todos.length === 0 && <h1 className="text-center">No Todos available! <br /> Add new todo!</h1>}
+      ) : (
+        <h1 className="text-center">
+          No Todos available! <br /> Add new todo!
+        </h1>
+      )}
       {/* <TaskCard item={item} /> */}
     </div>
   )
