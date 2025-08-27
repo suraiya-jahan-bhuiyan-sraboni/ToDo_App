@@ -38,7 +38,7 @@ import { toast } from 'sonner';
 const TaskCard = ({ item }) => {
     const dispatch = useDispatch();
     const [isExpanded, setIsExpanded] = useState(false);
-    console.log(item)
+    //console.log(item)
     const changeDes = item.description.substring(0, 100) + '....';
     const [newTask, setNewTask] = useState({ title: item.title, desc: item.description, date: item.date });
     const formatted = format(new Date(item.date), "EEE, dd MMM yyyy");
@@ -91,6 +91,7 @@ const TaskCard = ({ item }) => {
                             <DialogTrigger asChild>
                                 <button
                                     aria-label="Edit"
+                                    disabled={item.completed}
                                     className="text-gray-400 transition-colors hover:text-gray-600 cursor-pointer"
                                 >
                                     <Pencil className="h-5 w-5" />
