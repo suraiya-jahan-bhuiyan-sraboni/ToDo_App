@@ -10,7 +10,8 @@ This project demonstrates global state management, clean UI, and live statistics
 - Add new todos  
 - Edit existing todos  
 - Toggle todos as complete/incomplete  
-- Delete todos  
+- Delete todos
+- searching todos  
 - Filter todos (All / Active / Completed)  
 - Live stats (total, completed, remaining)  
 - Modern UI using **Shadcn** + **Tailwind CSS**  
