@@ -34,7 +34,7 @@ function App() {
         <CardContent className="flex items-center gap-10 justify-center sm:justify-between  font-medium sm:px-20 flex-wrap">
           <h1 >All: {stats.total}</h1>
           <h1>Active: {stats.remaining}</h1>
-          <h1>Completed:{stats.completed}</h1>
+          <h1>Completed: {stats.completed}</h1>
         </CardContent>
       </Card>
       <Card className="shadow-lg">

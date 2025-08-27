@@ -61,9 +61,9 @@ const TaskCard = ({ item }) => {
                 <div className="flex items-center gap-6 space-y-1 md:w-7/12 lg:w-2/3">
                     <Checkbox
                         checked={!!item.completed}
-                        onCheckedChange={() => { setIsExpanded(!isExpanded)}}
+                        onCheckedChange={() => { setIsExpanded(!isExpanded) }}
                         className="h-6 w-6 rounded border-2 cursor-pointer border-gray-300 data-[state=checked]:bg-green-600 data-[state=checked]:border-green-600"
-                        onClick={() => {dispatch(toggleTodo(item.id));toast.success("Task status updated!");}}
+                        onClick={() => { dispatch(toggleTodo(item.id)); toast.success("Task status updated!"); }}
                     />
                     <div>
                         <h3 className="font-semibold">{item.title}</h3>
@@ -105,7 +105,7 @@ const TaskCard = ({ item }) => {
                                     <div className="grid gap-4 mb-4">
                                         <div className="grid gap-3">
                                             <Label htmlFor="name-1">Title</Label>
-                                            <Input placeholder="Add a task title" value={newTask.title} onChange={(e) => setNewTask({ ...newTask, title: e.target.value })} required/>
+                                            <Input placeholder="Add a task title" value={newTask.title} onChange={(e) => setNewTask({ ...newTask, title: e.target.value })} required />
                                         </div>
                                         <div className="grid gap-3">
                                             <Label htmlFor="date-1">Date</Label>
@@ -143,7 +143,7 @@ const TaskCard = ({ item }) => {
 
                                         <div className="grid gap-3">
                                             <Label htmlFor="task">Description</Label>
-                                            <Textarea placeholder="Add any description to your task" value={newTask.desc} onChange={(e) => setNewTask({ ...newTask, desc: e.target.value })} required/>
+                                            <Textarea placeholder="Add any description to your task" value={newTask.desc} onChange={(e) => setNewTask({ ...newTask, desc: e.target.value })} required />
                                         </div>
                                     </div>
                                     <DialogFooter>

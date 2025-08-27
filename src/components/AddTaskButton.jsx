@@ -31,14 +31,14 @@ import { toast } from 'sonner';
 const AddTaskButton = () => {
     const dispatch = useDispatch();
     const [newTask, setNewTask] = useState({ title: "", desc: "", date: null });
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(
             addTodo({
                 title: newTask.title,
                 description: newTask.desc,
-               date: newTask.date ? newTask.date.toISOString() : new Date().toISOString(),
+                date: newTask.date ? newTask.date.toISOString() : new Date().toISOString(),
             })
         );
 
@@ -56,10 +56,10 @@ const AddTaskButton = () => {
                 </Button>
             </DialogTrigger>
             <DialogContent className="max-w-[425px]">
-                    <DialogHeader>
-                        <DialogTitle>Task Details</DialogTitle>
-                    </DialogHeader>
-                    <form onSubmit={(e) => handleSubmit(e)}>
+                <DialogHeader>
+                    <DialogTitle>Task Details</DialogTitle>
+                </DialogHeader>
+                <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="grid gap-4  mb-4">
                         <div className="grid gap-3">
                             <Label htmlFor="name-1">Title</Label>
@@ -101,7 +101,7 @@ const AddTaskButton = () => {
 
                         <div className="grid gap-3">
                             <Label htmlFor="task">Description</Label>
-                            <Textarea placeholder="Add any description to your task" value={newTask.desc} onChange={(e) => setNewTask({ ...newTask, desc: e.target.value })} required/>
+                            <Textarea placeholder="Add any description to your task" value={newTask.desc} onChange={(e) => setNewTask({ ...newTask, desc: e.target.value })} required />
                         </div>
                     </div>
                     <DialogFooter>
