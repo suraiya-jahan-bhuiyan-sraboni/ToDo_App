@@ -39,7 +39,7 @@ function App() {
       </Card>
       <Card className="shadow-lg">
         <CardContent className="flex items-center justify-center gap-10 md:justify-between font-medium sm:px-20 flex-col sm:flex-row flex-wrap">
-          <img src="src/assets/Vista SysTech-02 1.png" alt="logo" />
+          <img src="/assets/Vista SysTech-02 1.png" alt="logo" />
           <div className="flex items-center justify-between flex-col sm:flex-row flex-wrap gap-3 ">
             <div className="flex-1 mx-4">
               <div className="relative border bg-[#E2E8F0]/50 dark:bg-[#E2E8F0] w-full md:min-w-[15rem]  lg:min-w-[28rem] xl:min-w-xl rounded-lg">
